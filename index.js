@@ -46,6 +46,20 @@ async function run() {
         })
 
 
+        app.put('/update/:id', async (req, res) => {
+            const updateDoc = req.body;
+            const id = req.params.id;
+            const filter = { _id: ObjectId(id) }
+            console.log(updateDoc);
+            // const options = { upsert: true };
+            // const doc = { $set: { updateDoc } }
+            // console.log(filter);
+            // const result = await usersCollections.updateOne(filter, doc, options);
+            // console.log(result);
+            // res.json(result)
+        })
+
+
 
 
     }
